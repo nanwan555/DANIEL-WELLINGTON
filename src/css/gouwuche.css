@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+}
+
+.header span {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  font-size: 20px;
+}
+
+.header h3 {
+  text-align: center;
+  line-height: 60px;
+  border-bottom: 1px solid #ccc;
+}
+
+.itemlist {
+  list-style: none;
+  overflow: hidden;
+}
+
+.itemlist .item {
+  border: 1px solid black;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.itemlist .item div {
+  float: left;
+  margin: 30px 20px;
+}
+
+.itemlist .item .p-img img {
+  width: 100px;
+}
+
+.itemlist .item .p-title {
+  width: 500px;
+}
+
+.biaodai {
+  width: 100%;
+}
+
+.biaodai .btn {
+  width: 99%;
+  margin: 0 auto;
+}
+
+.biaodai .btn button {
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.slider {
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  width: 570px;
+  height: 400px;
+  display: none;
+}
+
+.slider div {
+  position: absolute;
+  width: 3000px;
+  text-align: center;
+}
+
+.slider div li {
+  list-style: none;
+  width: 500px;
+  height: 100px;
+  text-align: center;
+  float: left;
+}
+
+.slider div li p {
+  line-height: 30px;
+  text-align: center;
+}
+
+.slider div img {
+  float: left;
+  width: 500px;
+}
+
+.slider span {
+  position: absolute;
+  top: 180px;
+  font-size: 2em;
+  font-weight: 900;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.slider .last {
+  right: 0;
+}
+
+.footer-top {
+  width: 100%;
+}
+
+.footer-top .left {
+  width: 50%;
+  height: 50px;
+  line-height: 50px;
+  float: left;
+}
+
+.footer-top .right {
+  width: 20%;
+  height: 50px;
+  line-height: 50px;
+  float: right;
+  color: white;
+  text-align: center;
+}
+
+.footer-top .right h3 {
+  background: #353434;
+  width: 150px;
+  line-height: 50px;
+}

@@ -1,0 +1,499 @@
+                            @charset "utf-8";
+                            @mixin yuanjiao($arg1) {
+                                border-radius: $arg1;
+                                -webkit-border-radius: $arg1;
+                                -moz-border-radius: $arg1;
+                                -ms-border-radius: $arg1;
+                                -o-border-radius: $arg1;
+                            }
+                            
+                            * {
+                                margin: 0;
+                                padding: 0;
+                                box-sizing: border-box;
+                            }
+                            
+                            html,
+                            body {
+                                width: 100%;
+                                height: 100%;
+                                font-size: 16px;
+                                ul {
+                                    // width: 100%;
+                                    list-style: none;
+                                }
+                                a {
+                                    text-decoration: none !important;
+                                    display: block;
+                                    background-color: transparent;
+                                }
+                            }
+                            
+                            .header {
+                                width: 100%;
+                                height: 400px;
+                                .inner {
+                                    width: 100%;
+                                    height: 100%;
+                                    background: url(../img/bg1.jpg);
+                                    background-size: cover;
+                                    a {
+                                        text-align: center;
+                                        color: white;
+                                        padding: 20px 0;
+                                        &:hover {
+                                            text-decoration: none;
+                                        }
+                                    }
+                                    .header-2-2 {
+                                        display: flex;
+                                        justify-content: flex-end;
+                                        color: white;
+                                        position: fixed;
+                                        top: 20px;
+                                        right: 20px;
+                                        font-size: 20px;
+                                        z-index: 500;
+                                        span {
+                                            display: inline-block;
+                                            margin: 0 10px;
+                                        }
+                                    }
+                                    .title {
+                                        z-index: 200;
+                                        width: 100%;
+                                        margin-bottom: 20px;
+                                        background: rgba(0, 14, 34, .6);
+                                        li {
+                                            width: (100%/9);
+                                            margin-right: 10px;
+                                            position: relative;
+                                            .erji {
+                                                position: absolute;
+                                                display: none;
+                                                .erji-1 {
+                                                    width: 500px;
+                                                    height: 200px;
+                                                    background: #fff;
+                                                    ul {
+                                                        width: 30%;
+                                                        float: left;
+                                                        padding: 20px;
+                                                        display: flex;
+                                                        flex-direction: column;
+                                                        li {
+                                                            width: 100%;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            &:hover {
+                                                .erji {
+                                                    display: block;
+                                                }
+                                                .erji-2 {
+                                                    display: block;
+                                                }
+                                                .erji-3 {
+                                                    display: block;
+                                                }
+                                                .erji-4 {
+                                                    display: block;
+                                                }
+                                            }
+                                            .erji-2 {
+                                                width: 200px;
+                                                padding: 10px;
+                                                background: #fff;
+                                                position: absolute;
+                                                z-index: 111;
+                                                display: none;
+                                                ul {
+                                                    padding: 20px;
+                                                    text-align: center;
+                                                }
+                                            }
+                                            .erji-3 {
+                                                width: 300px;
+                                                padding: 20px;
+                                                background: #fff;
+                                                position: absolute;
+                                                z-index: 111;
+                                                display: none;
+                                                z-index: 222;
+                                                ul {
+                                                    width: 100%;
+                                                    padding: 20px;
+                                                    text-align: center;
+                                                    li {
+                                                        width: 50%;
+                                                        padding: 5px 0;
+                                                    }
+                                                }
+                                            }
+                                            .erji-4 {
+                                                width: 300px;
+                                                padding: 20px;
+                                                background: #fff;
+                                                position: absolute;
+                                                z-index: 111;
+                                                display: none;
+                                                z-index: 333;
+                                                ul {
+                                                    width: 100%;
+                                                    padding: 20px;
+                                                    text-align: center;
+                                                    li {
+                                                        width: 50%;
+                                                        padding: 5px 0;
+                                                    }
+                                                }
+                                            }
+                                            span {
+                                                display: inline-block;
+                                                border-bottom: 0 solid black;
+                                                transition: all 1s;
+                                            }
+                                            a {
+                                                height: 63px;
+                                                &:hover {
+                                                    span {
+                                                        border-bottom: 1px solid white
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            .select {
+                                background: rgb(229, 226, 226);
+                                height: 50px;
+                                line-height: 50px;
+                                text-align: center;
+                            }
+                            
+                            .select1 {
+                                height: 60px;
+                                text-align: center;
+                                h2 {
+                                    line-height: 60px;
+                                    text-align: center;
+                                }
+                            }
+                            
+                            .titleTap {
+                                width: 100%;
+                                position: fixed;
+                                left: 0;
+                                top: 0;
+                            }
+                            
+                            .title li {
+                                width: 33%;
+                                float: left;
+                                text-align: center;
+                            }
+                            
+                            // banner样式
+                            .banner {
+                                margin-bottom: 40px;
+                                .col-md-3 {
+                                    // padding: 0 !important;
+                                }
+                                p {
+                                    text-align: center;
+                                }
+                                .p-last {
+                                    margin-left: 100px;
+                                    text-align: center;
+                                    width: 150px;
+                                    height: 50px;
+                                    line-height: 50px;
+                                    border: 1px solid black;
+                                }
+                                img {
+                                    display: inline-block;
+                                    width: 100%;
+                                }
+                                a {
+                                    opacity: 0;
+                                }
+                            }
+                            
+                            .bg2 {
+                                width: 100%;
+                                height: 400px;
+                                background: url(../img/bg2.jpg);
+                                background-size: cover;
+                                .container {
+                                    position: relative;
+                                    top: 120px;
+                                    color: white;
+                                    a {
+                                        display: inline-block;
+                                        margin: 20px 20px 0 0;
+                                        color: white;
+                                        width: 150px;
+                                        height: 50px;
+                                        line-height: 50px;
+                                        text-align: center;
+                                        border: 1px solid white;
+                                    }
+                                }
+                            }
+                            
+                            .bg3 {
+                                position: relative;
+                                width: 100%;
+                                height: 400px;
+                                background: url(../img/bg3.jpg);
+                                background-size: cover;
+                                margin: 40px 0;
+                                .container {
+                                    width: 30%;
+                                    position: absolute;
+                                    top: 120px;
+                                    right: 0;
+                                    color: white;
+                                    a {
+                                        display: inline-block;
+                                        margin: 20px 20px 0 0;
+                                        color: white;
+                                        width: 150px;
+                                        height: 50px;
+                                        line-height: 50px;
+                                        text-align: center;
+                                        border: 1px solid white;
+                                    }
+                                }
+                            }
+                            
+                            .bg4 {
+                                width: 100%;
+                                height: 400px;
+                                background: url(../img/bg4.jpg);
+                                background-size: cover;
+                                margin-bottom: 40px;
+                                .container {
+                                    position: relative;
+                                    top: 120px;
+                                    color: white;
+                                    a {
+                                        display: inline-block;
+                                        margin: 20px 20px 0 0;
+                                        color: white;
+                                        width: 150px;
+                                        height: 50px;
+                                        line-height: 50px;
+                                        text-align: center;
+                                        border: 1px solid white;
+                                    }
+                                }
+                            }
+                            
+                            // bg5
+                            .bg5 {
+                                position: relative;
+                                width: 100%;
+                                height: 400px;
+                                background: url(../img/bg5.jpg);
+                                background-size: cover;
+                                margin-bottom: 40px;
+                                .container {
+                                    width: 40%;
+                                    position: absolute;
+                                    top: 120px;
+                                    right: 0;
+                                    top: 120px;
+                                    color: black;
+                                    a {
+                                        display: inline-block;
+                                        margin: 20px 20px 0 0;
+                                        color: black;
+                                        width: 150px;
+                                        height: 50px;
+                                        line-height: 50px;
+                                        text-align: center;
+                                        border: 1px solid black;
+                                    }
+                                }
+                            }
+                            
+                            .select2 {
+                                h3 {
+                                    margin-bottom: 40px;
+                                }
+                            }
+                            
+                            // bg6
+                            .bg6 {
+                                padding: 0 10px;
+                                margin-bottom: 40px;
+                                img {
+                                    width: 100%;
+                                }
+                                h2 {
+                                    text-align: center;
+                                }
+                                hr {
+                                    color: #948f8f;
+                                }
+                                p {
+                                    text-align: center;
+                                }
+                                .bgh {
+                                    background: #f4f4f4;
+                                }
+                            }
+                            
+                            .select3 {
+                                position: relative;
+                                p {
+                                    position: absolute;
+                                    right: -50px;
+                                    width: 150px;
+                                    height: 50px;
+                                    line-height: 50px;
+                                    text-align: center;
+                                    color: white;
+                                    border: 1px solid #000e22;
+                                    background: #000e22;
+                                }
+                                margin-bottom:40px;
+                            }
+                            
+                            footer {
+                                position: relative;
+                                background-color: #101820;
+                                color: #fff;
+                                font-family: "Futura Std", sans-serif;
+                                .inner {
+                                    position: relative;
+                                    min-height: 415px;
+                                    width: 1170px;
+                                    margin: 0 auto;
+                                    padding-top: 78px;
+                                    .inner-1 {
+                                        position: absolute;
+                                        left: 100px;
+                                        .footer__col {
+                                            width: 25%;
+                                            float: left;
+                                            min-height: 145px;
+                                            h3 {
+                                                font-size: 15px;
+                                                line-height: 15px;
+                                                padding-bottom: 23px;
+                                            }
+                                            ul {
+                                                margin: 0;
+                                                padding: 0;
+                                                border: 0;
+                                                font-size: 100%;
+                                                vertical-align: baseline;
+                                                li {
+                                                    font-size: 12px;
+                                                    line-height: 12px;
+                                                    letter-spacing: .15em;
+                                                    padding-bottom: 15px;
+                                                    a {
+                                                        color: #607285;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            .inner-2 {
+                                position: absolute;
+                                width: 40%;
+                                right: 0;
+                                padding: 10px 0;
+                                a {
+                                    display: inline-block;
+                                    color: #607285;
+                                }
+                                .input-box {
+                                    position: relative;
+                                    margin-top: 10px;
+                                    width: 100%;
+                                    input {
+                                        width: 217px;
+                                        height: 33px;
+                                        line-height: 33px;
+                                        background: #233445;
+                                        color: #fff;
+                                        border: none;
+                                        margin: 0 15px 0 0;
+                                        float: left;
+                                        font-size: 12px;
+                                    }
+                                    .btn--dark {
+                                        width: 33px;
+                                        height: 33px;
+                                        background: #233445;
+                                        color: #607285;
+                                        border-radius: 0;
+                                        border: 0;
+                                        padding: 0;
+                                    }
+                                }
+                                .inner-2-2 {
+                                    margin-top: 30px;
+                                }
+                            }
+                            
+                            .footer-bottom {
+                                width: 100%;
+                                text-align: center;
+                                padding-top: 30px;
+                                border-top: 1px solid rgba(89, 98, 108, .5);
+                                ul {
+                                    line-height: 12px;
+                                    li {
+                                        padding: 0 25px;
+                                        border-right: 1px solid #607285;
+                                        display: inline-block;
+                                        font-size: 12px;
+                                        line-height: 12px;
+                                        letter-spacing: .1em;
+                                        a {
+                                            color: #607285;
+                                        }
+                                    }
+                                }
+                                .footer-bottom-2 {
+                                    display: inline-block;
+                                    padding: 30px 0;
+                                    font-size: 12px;
+                                    line-height: 12px;
+                                    letter-spacing: .1em;
+                                    color: #607285;
+                                    div {
+                                        margin-bottom: 10px;
+                                        line-height: 18px;
+                                        span {
+                                            margin: 0;
+                                            padding: 0;
+                                            border: 0;
+                                            font-size: 100%;
+                                            font: inherit;
+                                            vertical-align: baseline;
+                                        }
+                                        a {
+                                            display: inline-block;
+                                            color: #607285;
+                                        }
+                                        p {
+                                            font-size: 12px;
+                                            line-height: 12px;
+                                            letter-spacing: .1em;
+                                            margin: 20px 0 0 0;
+                                        }
+                                    }
+                                }
+                            }

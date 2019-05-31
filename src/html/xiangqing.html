@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../css/xiangqing.css">
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../js/sy.js"></script>
+    <link rel="stylesheet" href="img/mobile-reset.css" rel="external nofollow" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner">
+            <div class="header-1">
+                <a href="https://www.danielwellington.cn/" title="Daniel Wellington" class="deader-1-1">D A N I E L W E L L I N G T O N</a>
+                <div class="header-2-2">
+                    <span class="glyphicon glyphicon-user"></span>
+                    <span class="glyphicon glyphicon-lock"></span>
+                </div>
+            </div>
+            <!--title-->
+            <ul class="title clearfix">
+
+                <li>
+                    <a href="https://www.danielwellington.cn/19apr-new/">
+                        <span>全新上市</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.danielwellington.cn/combo/">
+                        <span>礼品套装</span>
+
+                    </a>
+                </li>
+                <li class="ej">
+                    <a href="https://www.danielwellington.cn/myclassic-all-watches/">
+                        <span>腕表</span>
+
+                    </a>
+                    <div class="erji">
+                        <div class="erji-1">
+                            <ul>
+                                <li>所有手表</li>
+                                <li>男士手表</li>
+                                <li>女士手表</li>
+                            </ul>
+                            <ul>
+                                <li>Classic系列</li>
+                                <li>Classic Black系列</li>
+                                <li>Classic Petite系列</li>
+                                <li>Dapper系列</li>
+                                <li>Classy系列</li>
+
+                            </ul>
+                        </div>
+                </li>
+                <li>
+                    <a href="https://www.danielwellington.cn/classic-accessory/">
+                        <span>配饰</span>
+                    </a>
+                    <div class="erji-2">
+                        <ul>
+                            <li>戒指</li>
+                            <li>腕饰</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="https://www.danielwellington.cn/watchband-selector/">
+                        <span>表带</span>
+                    </a>
+                    <div class="erji-3">
+                        <ul>
+                            <li>选择表带</li>
+                            <li>金属表带</li>
+                            <li>织纹表带</li>
+                            <li>皮质表带</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="http://storelocator.danielwellington.cn/">
+                        <span>线下门店</span>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="https://www.danielwellington.cn/question/">
+                        <span>客户服务</span>
+                    </a>
+                    <div class="erji-4">
+                        <ul>
+                            <li>常见问题·</li>
+                            <li>订单查询</li>
+                            <li>更换表带</li>
+                            <li>防伪声明</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="https://www.danielwellington.cn/our-storys/">
+                        <span>品牌故事</span>
+
+                    </a>
+                </li>
+            </ul>
+            </div>
+    </header>
+    <script src="../js/sy.js"></script>
+    <!-- 放大镜 -->
+    <div class="fdj">
+        <div class="magnifier" id="magnifier1">
+            <div class="magnifier-container">
+                <div class="images-cover"></div>
+                <!--当前图片显示容器-->
+                <div class="move-view"></div>
+                <!--跟随鼠标移动的盒子-->
+            </div>
+            <div class="magnifier-assembly">
+                <div class="magnifier-btn">
+                    <span class="magnifier-btn-left">&lt;</span>
+                    <span class="magnifier-btn-right">&gt;</span>
+                </div>
+                <!--按钮组-->
+                <div class="magnifier-line">
+                    <ul class="clearfix animation03">
+                        <li>
+                            <div class="small-img">
+                                <img src="../img/1-1.jpg" />
+                            </div>
+                        </li>
+                        <li>
+                            <div class="small-img">
+                                <img src="../img/1-2.jpg" />
+                            </div>
+                        </li>
+                        <li>
+                            <div class="small-img">
+                                <img src="../img/1-3.png" />
+                            </div>
+                        </li>
+                        <li>
+                            <div class="small-img">
+                                <img src="../img/1-4.png" />
+                            </div>
+                        </li>
+                        <li>
+                            <div class="small-img">
+                                <img src="../img/1-5.png" />
+                            </div>
+                        </li>
+                        <li>
+                            <div class="small-img">
+                                <img src="../img/1-6.jpg" />
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--缩略图-->
+            </div>
+            <div class="magnifier-view">
+            </div>
+            <!--经过放大的图片显示容器-->
+        </div>
+    </div>
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="../js/magnifier.js"></script>
+    <div class="jieshao">
+        <ul>
+            <li>CLASSIC PETITE | 28MM</li>
+            <li>
+                <h3>M E L R O S E</h3>
+            </li>
+            <li>颜色</li>
+            <li class="glyphicon glyphicon-asterisk cor"></li>
+            <hr>
+            <li>尺寸</li>
+            <li class="size"><span class="green">28</span><span>32</span></li>
+            <li class="black"><span>￥ 1,290</span>|<span>立即购买</span></li>
+            <li class="brow">开启个性定制服务</li>
+            <li class="shar">
+                <span>分享:</span>
+                <img src="../img/weixin.png" alt="分享到微信">
+                <img src="../img/sina.png" alt="分享到微博">
+                <img src="../img/kongjian.png" alt="分享到qq空间">
+            </li>
+        </ul>
+    </div>
+
+    <section class="main-1">
+        <div class="inner-1">
+            <div class="inner-1-1">
+                <h3>CLASSIC PETITE</h3>
+                <p>
+                    CLASSIC PETITE系列，可搭配精致细密的金属表带，简致12指针刻度，绽放
+                </p>
+                <p>
+                    于手腕的细节艺术，闪耀迷人光泽。
+                </p>
+            </div>
+            <div class="bg1">
+            </div>
+            <div class="bg1-bottom">
+                <div class="bg1-bottom-main">
+                    <ul>
+                        <li><span class="pro-label">尺寸</span>
+                            <span class="pro-value">28mm</span>
+                        </li>
+                        <li><span class="pro-label">表壳厚度</span>
+                            <span class="pro-value">6mm</span>
+                        </li>
+                        <li><span class="pro-label">表盘颜色</span>
+                            <span class="pro-value">蛋壳白</span>
+                        </li>
+                        <li><span class="pro-label">机芯</span>
+                            <span class="pro-value">日本石英机芯</span>
+                        </li>
+                        <li><span class="pro-label">表带尺寸</span>
+                            <span class="pro-value">190*12mm</span>
+                        </li>
+                        <li><span class="pro-label">表带材质</span>
+                            <span class="pro-value">金属</span>
+                        </li>
+                        <li><span class="pro-label">表带颜色</span>
+                            <span class="pro-value">玫瑰金色</span>
+                        </li>
+                        <li><span class="pro-label">可互换表带</span>
+                            <span class="pro-value">是</span>
+                        </li>
+                        <li><span class="pro-label">防水等级</span>
+                            <span class="pro-value">30米生活防水</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg2">
+                <div class="one-seven">
+                    <img src="../img/1-7.png">
+                </div>
+                <div class="bg2-main">
+                    <h3>
+                        PETITE 系列</h3>
+                    <p>32mm/28mm精致表盘，遵循人体工学设计，彰显女</p>
+                    <p>
+                        士纤巧玉腕，愈显迷人。
+                    </p>
+                </div>
+            </div>
+            <div class="bg3">
+                <div class="bg3-main">
+                    <h3>
+                        雅致包装</h3>
+                    <p>所有从Daniel Wellington官网选购的单品或套装,</p>
+                    <p>
+                        均享雅致礼盒和精美手袋包装。
+                    </p>
+
+                </div>
+            </div>
+            <div class="bg4">
+                <div class="bg4-tu">
+                    <img src="../img/1-5.png">
+                </div>
+            </div>
+            <div class="shuoming">
+                <div class="center">
+                    价格说明
+                </div>
+                <div class="right">
+                    <div class="right-top">
+                        <h4>划线价格</h4>
+                        <p>
+                            指商品的专柜价、吊牌价、建议零售价或该商品的曾经展示过的销售价格等，并非原价，仅供您参考。
+                        </p>
+                    </div>
+                    <div class="right-bottom">
+                        <h4>未划线价格</h4>
+                        <p>
+                            指商品的实时标价，具体成交价格根据商品参加活动，或因顾客使用折扣码、优惠券、积分等发生变化，最终以订单结算页价格为准。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="baoyang">
+
+                <li>
+                    <h4>日常保养</h4>
+                </li>
+
+                <li>
+                    <img src="../img/clean.png">
+                    <p>可用软布擦拭或软刷清洁</p>
+                </li>
+                <li>
+                    <img src="../img/stopHit.png">
+                    <p>避免接触尖锐物体</p>
+                </li>
+                <li>
+                    <img src="../img/stopWash.png">
+                    <p>请勿在潮湿环境中佩戴(浴室,泳池等)</p>
+                </li>
+
+
+            </div>
+        </div>
+
+        <div class="dapeilinggan">
+            <h4>搭 配 灵 感</h4>
+            <div class="dpinner container">
+                <li class="col-md-3">
+                    <img src="../img/dapei1.jpg">
+                </li>
+                <li class="col-md-3">
+                    <img src="../img/dapei2.jpg">
+                </li>
+                <li class="col-md-3">
+                    <img src="../img/dapei3.jpg">
+                </li>
+                <li class="col-md-3">
+                    <img src="../img/dapei4.jpg">
+                </li>
+            </div>
+        </div>
+        <div class="like">
+            <h4>您 可 能 也 喜 欢</h4>
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md-3">
+                        <img src="../img/1.png">
+                        <p>C L A S S I C PETITE ASHFIELD</p>
+                        <p>
+                            28 MM
+                        </p>
+                        <p>
+                            <span>￥</span> 1,290
+                        </p>
+                        <p class="p-last">
+                            立即购买
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="../img/2.png">
+                        <p>C L A S S I C PETITE ASHFIELD</p>
+                        <p>
+                            28 MM
+                        </p>
+                        <p>
+                            <span>￥</span> 1,290
+                        </p>
+                        <p class="p-last">
+                            立即购买
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="../img/3.png">
+                        <p>C L A S S I C PETITE ASHFIELD</p>
+                        <p>
+                            40 MM
+                        </p>
+                        <p>
+                            <span>￥</span> 1,290
+                        </p>
+                        <p class="p-last">
+                            立即购买
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="../img/4.png">
+                        <p>C L A S S I C PETITE ASHFIELD</p>
+                        <p>
+                            40 MM
+                        </p>
+                        <p>
+                            <span>￥</span> 1,290
+                        </p>
+                        <p class="p-last">
+                            立即购买
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+        <!-- <span class="footer--arrow-up icon-arrow button-round"></span> -->
+        <div class="inner">
+            <div class="inner-1">
+                <section class="footer__col expanded">
+                    <h3 class="footer__title footer__title-js">手表</h3>
+                    <div class="made-menu-container">
+                        <ul class="made-menu ">
+                            <li class="">
+                                <a href="/myclassic-all-watches">
+                                                所有手表                        
+                                            </a>
+                            </li>
+                            <li class="">
+                                <a href="/myclassic-man-watches">
+                                                男士手表                       
+                                           </a>
+                            </li>
+                            <li class="bottom-middle-space">
+                                <a href="/myclassic-woman-watches">
+                                                女士手表                        
+                                            </a>
+                            </li>
+                            <li class="">
+                                <a href="/watch-classic-collection">
+                                                Classic系列                        
+                                            </a>
+                            </li>
+                            <li class="">
+                                <a href="/watch-classic-black-collection">
+                                                Classic Black系列                       
+                                            </a>
+                            </li>
+                            <li class="">
+                                <a href="/watch-classic-petite-collection">
+                                                Classic Petite系列                        
+                                            </a>
+                            </li>
+                            <li class="">
+                                <a href="/watch-dapper-collection">
+                                                Dapper系列                        
+                                            </a>
+                            </li>
+                            <li class="">
+                                <a href="/watch-classy-collection">
+                                                Classy系列                        
+                                            </a>
+                            </li>
+                            <li class="">
+                                <a href="/combo">
+                                                礼品套装                        
+                                            </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="footer__col">
+                    <h3 class="footer__title footer__title-js">表带</h3>
+                    <div class="made-menu-container">
+                        <ul class="made-menu ">
+                            <li class="">
+                                <a href="/watchband-selector">
+                                                选购表带                        
+                                            </a>
+                            </li>
+                            <li class="">
+                                <a href="/how-to-change-your-strap">
+                                                更换/调节表带教程                        
+                                            </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="footer__col">
+                    <h3 class="footer__title footer__title-js">配饰</h3>
+                    <div class="made-menu-container">
+                        <ul class="made-menu ">
+                            <li class="">
+                                <a href="/accessories-cuff-charm">
+                                                手镯                        
+                                            </a>
+                            </li>
+                            <li class="">
+                                <a href="/19apr-new">
+                                                戒指                       
+                                             </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="footer__col">
+                    <h3 class="footer__title footer__title-js">关于 DW</h3>
+                    <div class="made-menu-container">
+                        <ul class="made-menu ">
+                            <li class="">
+                                <a href="/our-storys">
+                                                品牌故事                        
+                                            </a>
+                            </li>
+                            <li class="">
+                                <a href="http://storelocator.danielwellington.cn/">
+                                                门店及专柜                       
+                                             </a>
+                            </li>
+                            <li class="">
+                                <a href="https://careerschina.danielwellington.cn/">
+                                                加入我们                        
+                                            </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="footer__col">
+                    <h3 class="footer__title footer__title-js">定制服务</h3>
+                    <div class="made-menu-container">
+                        <ul class="made-menu ">
+                            <li class="">
+                                <a href="/dw-recording">
+                                                声纹刻印                       
+                                             </a>
+                            </li>
+                            <li class="">
+                                <a href="/dw-embossing">
+                                                表带刻印                        
+                                            </a>
+                            </li>
+                            <li class="">
+                                <a href="/bundle-creator">
+                                                搭配个性套装                        
+                                            </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="footer__col">
+                    <h3 class="footer__title footer__title-js">购物帮助</h3>
+                    <div class="made-menu-container">
+                        <ul class="made-menu ">
+                            <li class="questions-pay">
+                                <a href="/question#payment">
+                                                支付方式                       
+                                            </a>
+                            </li>
+                            <li class="questions-express">
+                                <a href="/question#delivery">
+                                                配送服务                        
+                                            </a>
+                            </li>
+                            <li class="questions-invoice">
+                                <a href="/question#invoice">
+                                                开具发票                        
+                                            </a>
+                            </li>
+                            <li class="questions-repair">
+                                <a href="/question#warranty">
+                                                保修政策                        
+                                            </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="footer__col">
+                    <h3 class="footer__title footer__title-js">顾客服务</h3>
+                    <div class="made-menu-container">
+                        <ul class="made-menu ">
+                            <li class="">
+                                <a href="/question">
+                                                常见问题                        
+                                            </a>
+                            </li>
+                            <li class="">
+                                <a href="/sales/guest/form">
+                                                订单查询                        
+                                            </a>
+                            </li>
+                            <li class="">
+                                <a href="/return-policy">
+                                                退货规定                        
+                                            </a>
+                            </li>
+                            <li class="">
+                                <a href="/contact">
+                                                联系我们                        
+                                            </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <div class="inner-2">
+                <section class="inner-2-1">
+                    <h4>
+                        关注DW
+                    </h4>
+                    <div class="made-menu-container">
+                        <a href="http://weibo.com/danielwellingtoncn?is_hot=1" target="_blank">
+                            <span class="icon-social-weibo">微博</span>
+                        </a>
+                        <a href="javascript:void(0);" class="icon-wechat-wrap">
+                            <span class="icon-social-wechat">微信</span>
+
+                        </a>
+                    </div>
+                </section>
+                <section class="inner-2-2">
+                    <h4>
+                        订阅最新资讯
+                    </h4>
+                    <div class="made-menu-container">
+                        <a href="http://weibo.com/danielwellingtoncn?is_hot=1" target="_blank">
+                            <p>第一时间获取最新资讯、活动邀请及优惠信息。</p>
+                        </a>
+                        <div class="input-box">
+                            <input class="input-text js-label-toggle form-control required-entry validate-email" type="email" name="email" id="newsletter" placeholder="邮箱地址" title="订阅我们">
+                            <button type="submit" title="订阅" class="btn btn--dark">
+                                    <!-- 立即订阅 -->
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </button>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <section class="footer-bottom-1">
+                <div class="made-menu-container">
+                    <ul class="made-menu ">
+                        <li class="">
+                            <a href="/terms">
+                                            使用条款                        
+                                        </a>
+                        </li>
+                        <li class="">
+                            <a href="/privacy-policy">
+                                            隐私保护政策                        
+                                        </a>
+                        </li>
+                        <li class="">
+                            <a href="/quality_statement">
+                                            防伪声明                        
+                                        </a>
+                        </li>
+                        <li class="">
+                            <a href="/sitemap">
+                                            网站地图                        
+                                        </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="footer-bottom-2">
+                <div class="copyright-list">
+                    <span><img src="../img/logo.png"></span>
+                    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030502000796" target="_blank">
+                            粤公网安备 44030502000796号
+                        </a> |
+                    <a target="_blank" href="http://www.beian.miit.gov.cn">
+                            粤ICP备15098750号-1M
+                        </a> |
+                    <a target="_blank" href="/business_license">
+                            营业执照
+                        </a>
+                </div>
+                <p>ALL RIGHTS RESERVED. COPYRIGHT © 丹尼尔惠灵顿贸易（深圳）有限公司</p>
+            </section>
+        </div>
+    </footer>
+
+
+    <script src="jquery.js"></script>
+    <script src="../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
