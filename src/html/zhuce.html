@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="../css/zhuce.css">
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../js/sy.js"></script>
-    <link rel="stylesheet" href="img/mobile-reset.css" rel="external nofollow" />
 </head>
 
 <body>
@@ -74,18 +73,20 @@
                 </select>
                 <!-- <span class="glyphicon glyphicon-chevron-down xiala"></span> -->
             </div>
-            <div class="form-item">
-                <label for="val-mobile">手机号码</label>
-                <input type="number" id="val-mobile" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" data-link="https://timeclub.danielwellington.cn/member/account/verifyMobile" placeholder="请输入您的手机号码" maxlength="11">
-                <div class="error-tip">请输入您的手机号码</div>
-            </div>
-            <div class="form-item">
-                <label for="val-vcode"> 验证码</label>
-                <input type="number" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" data-link="https://timeclub.danielwellington.cn/member/account/verifyVcode" class="val-vcode disabled" disabled="true" id="val-vcode" placeholder="请输入短信验证码" maxlength="6">
-                <div id="btn-sms" class="btn-sms" data-link="https://timeclub.danielwellington.cn/action/sms/send/register">获取验证码</div>
-                <span class="correct-icon">验证成功</span>
-                <div class="error-tip">请输入<span class="DW-font-book">6</span>位数字验证码</div>
-            </div>
+            <form class="form-item" action="../lib/zhuce.php" method="POST">
+                <label for="val-mobile">账户</label>
+                <input type="text" id="username" placeholder="请输入您的用户名" name="username" style="margin-bottom: 20px;">
+                <div class="error-tip username">请输入您的用户名</div>
+                <label for="val-email">邮箱</label>
+                <input type="email" id="email" placeholder="请输入邮箱" name="email">
+                <label for="val-vcode" style="margin-top:40px;"> 密码</label>
+                <input type="password" name="password" class="val-vcode disabled password" id="password" placeholder="请输入您的密码" maxlength="6">
+                <div id="btn-sms" class="btn-sms" style="margin-bottom:40px;">记住密码</div>
+                <label for="sex">性别</label>
+                <input type="text" id="sex" name="sex" placeholder="请输入性别">
+                <input type="submit" value="即刻注册" class="btn-submit" style="margin-top:40px;">
+                <!-- <a href="./denglu.html"></a> -->
+            </form>
             <div class="agreement">
                 <div id="agreement-centent">
                     <input type="checkbox" id="val-agreement">
@@ -95,7 +96,8 @@
                 </div>
             </div>
             <input type="hidden" id="go-home" data-link="https://timeclub.danielwellington.cn">
-            <div class="btn-submit" data-link="https://timeclub.danielwellington.cn/action/account/register/submit">即刻加入</div>
+            <!-- <input type="submit" value="即刻注册" class="btn-submit"> -->
+            <!-- <div class="btn-submit" data-link="https://timeclub.danielwellington.cn/action/account/register/submit">即刻注册</div> -->
             <div class="go-register">已经是会员？<a href="https://timeclub.danielwellington.cn/member/account/login">立即登录</a></div>
         </div>
     </div>
@@ -151,12 +153,7 @@
         </section>
     </footer>
 
-
-
-
-
-
-    <script src="jquery.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
     <script src="../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 </body>
 

@@ -1,6 +1,6 @@
 <?php
 include('conn.php');
-$banner="banner0";
+$banner="banner0-1";
 $sql="select * from dw where banner='$banner'";
 $res=$mysqli->query($sql);
 $arr=array();

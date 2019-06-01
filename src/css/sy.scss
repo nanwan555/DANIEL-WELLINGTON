@@ -18,6 +18,13 @@
                                 width: 100%;
                                 height: 100%;
                                 font-size: 16px;
+                                .container-fluid {
+                                    padding: 0 !important;
+                                    .row {
+                                        margin-left: 0;
+                                        margin-right: 0;
+                                    }
+                                }
                                 ul {
                                     // width: 100%;
                                     list-style: none;
@@ -50,13 +57,40 @@
                                         justify-content: flex-end;
                                         color: white;
                                         position: fixed;
-                                        top: 20px;
+                                        top: -5px;
                                         right: 20px;
                                         font-size: 20px;
                                         z-index: 500;
+                                        .dl {
+                                            &:hover {
+                                                .dz {
+                                                    display: block;
+                                                }
+                                            }
+                                        }
                                         span {
                                             display: inline-block;
                                             margin: 0 10px;
+                                        }
+                                        .dz {
+                                            font-size: 14px;
+                                            width: 80px;
+                                            height: 100px;
+                                            text-align: center;
+                                            background: white;
+                                            color: black;
+                                            position: absolute;
+                                            box-shadow: 3px 3px 3px #ccc;
+                                            top: 66px;
+                                            display: none;
+                                            right: 10px;
+                                            ul {
+                                                li {
+                                                    a {
+                                                        color: black;
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                     .title {
@@ -75,6 +109,7 @@
                                                     width: 500px;
                                                     height: 200px;
                                                     background: #fff;
+                                                    box-shadow: 3px 3px 3px #ccc;
                                                     ul {
                                                         width: 30%;
                                                         float: left;
@@ -108,6 +143,7 @@
                                                 position: absolute;
                                                 z-index: 111;
                                                 display: none;
+                                                box-shadow: 3px 3px 3px #ccc;
                                                 ul {
                                                     padding: 20px;
                                                     text-align: center;
@@ -121,6 +157,7 @@
                                                 z-index: 111;
                                                 display: none;
                                                 z-index: 222;
+                                                box-shadow: 3px 3px 3px #ccc;
                                                 ul {
                                                     width: 100%;
                                                     padding: 20px;
@@ -139,6 +176,7 @@
                                                 z-index: 111;
                                                 display: none;
                                                 z-index: 333;
+                                                box-shadow: 3px 3px 3px #ccc;
                                                 ul {
                                                     width: 100%;
                                                     padding: 20px;
@@ -199,8 +237,8 @@
                             // banner样式
                             .banner {
                                 margin-bottom: 40px;
-                                .col-md-3 {
-                                    // padding: 0 !important;
+                                .row {
+                                    width: 100%
                                 }
                                 p {
                                     text-align: center;
@@ -217,9 +255,12 @@
                                     display: inline-block;
                                     width: 100%;
                                 }
-                                a {
-                                    opacity: 0;
-                                }
+                                // .left {
+                                //     opacity: 0;
+                                // }
+                                // .right {
+                                //     opacity: 0;
+                                // }
                             }
                             
                             .bg2 {

@@ -11,6 +11,17 @@ body {
   font-size: 16px;
 }
 
+html .container-fluid,
+body .container-fluid {
+  padding: 0 !important;
+}
+
+html .container-fluid .row,
+body .container-fluid .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 html ul,
 body ul {
   list-style: none;
@@ -50,15 +61,37 @@ body a {
   justify-content: flex-end;
   color: white;
   position: fixed;
-  top: 20px;
+  top: -5px;
   right: 20px;
   font-size: 20px;
   z-index: 500;
 }
 
+.header .inner .header-2-2 .dl:hover .dz {
+  display: block;
+}
+
 .header .inner .header-2-2 span {
   display: inline-block;
   margin: 0 10px;
+}
+
+.header .inner .header-2-2 .dz {
+  font-size: 14px;
+  width: 80px;
+  height: 100px;
+  text-align: center;
+  background: white;
+  color: black;
+  position: absolute;
+  box-shadow: 3px 3px 3px #ccc;
+  top: 66px;
+  display: none;
+  right: 10px;
+}
+
+.header .inner .header-2-2 .dz ul li a {
+  color: black;
 }
 
 .header .inner .title {
@@ -83,6 +116,7 @@ body a {
   width: 500px;
   height: 200px;
   background: #fff;
+  box-shadow: 3px 3px 3px #ccc;
 }
 
 .header .inner .title li .erji .erji-1 ul {
@@ -120,6 +154,7 @@ body a {
   position: absolute;
   z-index: 111;
   display: none;
+  box-shadow: 3px 3px 3px #ccc;
 }
 
 .header .inner .title li .erji-2 ul {
@@ -135,6 +170,7 @@ body a {
   z-index: 111;
   display: none;
   z-index: 222;
+  box-shadow: 3px 3px 3px #ccc;
 }
 
 .header .inner .title li .erji-3 ul {
@@ -156,6 +192,7 @@ body a {
   z-index: 111;
   display: none;
   z-index: 333;
+  box-shadow: 3px 3px 3px #ccc;
 }
 
 .header .inner .title li .erji-4 ul {
@@ -217,6 +254,10 @@ body a {
   margin-bottom: 40px;
 }
 
+.banner .row {
+  width: 100%;
+}
+
 .banner p {
   text-align: center;
 }
@@ -233,10 +274,6 @@ body a {
 .banner img {
   display: inline-block;
   width: 100%;
-}
-
-.banner a {
-  opacity: 0;
 }
 
 .bg2 {

@@ -14,7 +14,84 @@
     <link rel="stylesheet" href="../css/xiangqing.css">
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../js/sy.js"></script>
-    <link rel="stylesheet" href="img/mobile-reset.css" rel="external nofollow" />
+    <script src="../js/cookie.js"></script>
+    <script>
+        $(function() {
+            var id = location.search.split('=')[1];
+            console.log(id);
+            $.ajax({
+                type: "get",
+                url: "../lib/xiangqing.php",
+                data: {
+                    id: id
+                },
+                dataType: "json",
+                success: function(response) {
+                    // console.log(response)
+
+                    // var tupian = $('.xiangqingtu');
+                    var tu1 = $('.tu1');
+                    var tu2 = $('.tu2');
+                    var tu3 = $('.tu3');
+                    var tu4 = $('.tu4');
+                    var pic = JSON.parse(response.pic);
+                    var template = `
+                    <img src="${pic[0].src}" />
+                    `;
+                    tu1.append(template);
+
+                    var template1 = `
+                    <img src="${pic[1].src}" />
+                    `;
+                    tu2.append(template1);
+                    var template2 = `
+                    <img src="${pic[2].src}" />
+                    `;
+                    tu3.append(template2);
+                    var template3 = `
+                    <img src="${pic[3].src}" />
+                    `;
+                    tu4.append(template3);
+
+                    var gouwu = $('.gouwu');
+                    gouwu.on('click', function() {
+                        // alert(1);
+                        // console.log(response.id);
+                        addShopCar(response.id, response.price);
+                        location.href = 'gouwuche.html';
+
+                    });
+
+                }
+            });
+
+
+            function addShopCar(id, price, num) {
+                var shop = cookie.get('shop'); //从cookie获取shop
+                var product = {
+                    "id": id,
+                    "price": price,
+                    "num": num
+                };
+                if (shop) {
+                    shop = JSON.parse(shop); // cookie中如果有数据 这个数据是json字符串 转成对象
+
+                    if (shop.some(elm => elm.id == id)) {
+                        shop.forEach(function(elm, i) {
+                            elm.id == id ? elm.num = num : null;
+                        });
+                    } else {
+                        shop.push(product);
+                    }
+                    cookie.set('shop', JSON.stringify(shop), 1);
+                } else {
+                    shop = [];
+                    shop.push(product);
+                    cookie.set('shop', JSON.stringify(shop), 1);
+                }
+            }
+        })
+    </script>
 </head>
 
 <body>
@@ -121,41 +198,38 @@
         <div class="magnifier" id="magnifier1">
             <div class="magnifier-container">
                 <div class="images-cover"></div>
-                <!--当前图片显示容器-->
                 <div class="move-view"></div>
-                <!--跟随鼠标移动的盒子-->
             </div>
             <div class="magnifier-assembly">
                 <div class="magnifier-btn">
                     <span class="magnifier-btn-left">&lt;</span>
                     <span class="magnifier-btn-right">&gt;</span>
                 </div>
-                <!--按钮组-->
                 <div class="magnifier-line">
-                    <ul class="clearfix animation03">
+                    <ul class="clearfix animation03 xiangqingtu">
                         <li>
-                            <div class="small-img">
-                                <img src="../img/1-1.jpg" />
+                            <div class="small-img tu1">
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="small-img tu2">
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="small-img tu3">
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="small-img tu4">
+
                             </div>
                         </li>
                         <li>
                             <div class="small-img">
-                                <img src="../img/1-2.jpg" />
-                            </div>
-                        </li>
-                        <li>
-                            <div class="small-img">
-                                <img src="../img/1-3.png" />
-                            </div>
-                        </li>
-                        <li>
-                            <div class="small-img">
-                                <img src="../img/1-4.png" />
-                            </div>
-                        </li>
-                        <li>
-                            <div class="small-img">
-                                <img src="../img/1-5.png" />
+                                <img src="../img/4-5.jpg" />
                             </div>
                         </li>
                         <li>
@@ -165,18 +239,16 @@
                         </li>
                     </ul>
                 </div>
-                <!--缩略图-->
             </div>
             <div class="magnifier-view">
             </div>
-            <!--经过放大的图片显示容器-->
         </div>
     </div>
     <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
     <script type="text/javascript" src="../js/magnifier.js"></script>
     <div class="jieshao">
         <ul>
-            <li>CLASSIC PETITE | 28MM</li>
+            <li class="title">CLASSIC PETITE | 28MM</li>
             <li>
                 <h3>M E L R O S E</h3>
             </li>
@@ -185,7 +257,10 @@
             <hr>
             <li>尺寸</li>
             <li class="size"><span class="green">28</span><span>32</span></li>
-            <li class="black"><span>￥ 1,290</span>|<span>立即购买</span></li>
+            <li class="black gouwu"><span>￥ 1,290</span>|<span>立即购买</span></li>
+
+
+
             <li class="brow">开启个性定制服务</li>
             <li class="shar">
                 <span>分享:</span>
@@ -661,7 +736,7 @@
     </footer>
 
 
-    <script src="jquery.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
     <script src="../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 </body>
 

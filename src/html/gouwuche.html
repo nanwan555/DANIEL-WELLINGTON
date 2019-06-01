@@ -12,8 +12,105 @@
       <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
-
     <script src="../../node_modules/jquery//dist/jquery.min.js"></script>
+    <script src="../js/cookie.js"></script>
+    <script>
+        $(function() {
+
+            var shop = cookie.get('shop');
+            if (shop) {
+                shop = JSON.parse(shop);
+                console.log(shop);
+                var idList = shop.map(elm => elm.id).join();
+                $.ajax({
+                    type: "get",
+                    url: "../lib/gouwuche.php",
+                    data: {
+                        "idList": idList
+                    },
+                    dataType: "json",
+                    success: function(response) {
+                        var template = "";
+                        response.forEach(function(elm) {
+                            var pic = JSON.parse(elm.pic);
+                            var arr = shop.filter((val, i) => {
+                                return val.id === elm.id;
+                                // console.log(arr)
+                            });
+                            template = `
+                            <li class="item">
+                <div class="c-box">
+                    <input type="checkbox" id="p-${elm.id}">
+                </div>
+                <div class="p-img">
+                    <img src="${pic[0].src}" alt="">
+                </div>
+                <div class="p-title">
+                   ${elm.title}
+                </div>
+                <div class="p-num">
+                    数量：<input type="number" value="1" min="1" max="" >
+                </div>
+                <div class="p-price">
+                    单价:￥${elm.price}
+                </div>
+                <div class="p-sum">
+                    总价:${elm.price}
+                </div>
+                <div class="del" data-del="${arr[0].id}"><a href="#">删除</a></div>
+            </li>
+                            `;
+                            $('.itemlist').append(template);
+
+                        });
+                        var num = $('.p-num input');
+                        var sum = $('.p-sum');
+                        // var price = $('.p-price').html().split('￥')[1];
+                        num.on('keyup', function() {
+
+                            var num1 = this.value;
+                            var price = $(this).parent().siblings('.p-price').html().split('￥')[1];
+                            // console.log(num1)
+                            sum1 = num1 * price;
+
+                            $(this).parent().siblings('.p-sum').html("总价:" + sum1)
+
+                        });
+                        var inp = $('.c-box input');
+                        var total = $('.total');
+                        inp.on('click', function() {
+                            var isCheck = $(this).prop('checked');
+                            // console.log(isCheck)
+                            var sum2 = $(this).parent().siblings('.p-sum').html().split(':')[1];
+
+                            if (isCheck) {
+                                total.html(function(idex, oldvalue) {
+                                    return 1 * oldvalue + sum2 * 1;
+                                })
+
+                            } else {
+                                total.html(function(idex, oldvalue) {
+                                    return 1 * oldvalue - sum2 * 1;
+                                })
+                            }
+                        });
+                        var del = $('.del');
+                        del.on('click', function() {
+                            // console.log(del.parent().remove())
+                            $(this).parent().remove();
+                            var index = $(this).attr('data-del');
+                            var arr1 = shop.filter(function(val, i) {
+                                return val.id !== index;
+                            })
+                            arr1 = JSON.stringify(arr1);
+                            cookie.set('shop', arr1)
+                        })
+
+                    }
+                });
+            }
+        })
+    </script>
 </head>
 
 <body>
@@ -24,7 +121,7 @@
 
     <div class="tianjia">
         <ul class="itemlist">
-            <li class="item">
+            <!-- <li class="item">
                 <div class="c-box">
                     <input type="checkbox" id="p1">
                 </div>
@@ -44,7 +141,7 @@
                     总价:9999.00
                 </div>
                 <div class="del"><a href="#">删除</a></div>
-            </li>
+            </li> -->
         </ul>
     </div>
 
@@ -94,7 +191,7 @@
     </div>
     <footer class="footer-top">
         <div class="left">
-            <h2>总计 :</h2>
+            <h2>总计 : <span class="total">0</span>元</h2>
             <sapn></sapn>
         </div>
         </div>
@@ -102,7 +199,7 @@
             <h3>前往结账</h3>
         </div>
     </footer>
-    <script src="jquery.js"></script>
+
     <script src="../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script src="../js/gouwuche.js"></script>
 </body>
