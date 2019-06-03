@@ -104,6 +104,7 @@ body a {
   margin-bottom: 40px;
   width: 100%;
   float: left;
+  position: relative;
 }
 
 .box-form .form-body .form-item label {
@@ -129,7 +130,18 @@ body a {
   position: absolute;
   left: 0;
   right: auto;
-  top: auto;
+  top: 210px;
+  bottom: -20px;
+}
+
+.box-form .form-body .form-item .error-tip-email {
+  display: none;
+  line-height: 13px;
+  color: #d80000 !important;
+  position: absolute;
+  left: 0;
+  right: auto;
+  top: 210px;
   bottom: -20px;
 }
 
@@ -183,17 +195,6 @@ body a {
   height: 50px;
   font-size: 13px;
   line-height: 50px;
-}
-
-.box-form .form-body .form-item .error-tip {
-  display: none;
-  line-height: 13px;
-  color: #d80000 !important;
-  position: absolute;
-  left: 0;
-  right: auto;
-  top: auto;
-  bottom: -20px;
 }
 
 .box-form .form-body .agreement {

@@ -94,6 +94,7 @@
                     margin-bottom: 40px;
                     width: 100%;
                     float: left;
+                    position: relative;
                     label {
                         width: 100%;
                         display: block;
@@ -115,7 +116,17 @@
                         position: absolute;
                         left: 0;
                         right: auto;
-                        top: auto;
+                        top: 210px;
+                        bottom: -20px;
+                    }
+                    .error-tip-email {
+                        display: none;
+                        line-height: 13px;
+                        color: #d80000!important;
+                        position: absolute;
+                        left: 0;
+                        right: auto;
+                        top: 210px;
                         bottom: -20px;
                     }
                     select {
@@ -164,16 +175,6 @@
                         height: 50px;
                         font-size: 13px;
                         line-height: 50px;
-                    }
-                    .error-tip {
-                        display: none;
-                        line-height: 13px;
-                        color: #d80000!important;
-                        position: absolute;
-                        left: 0;
-                        right: auto;
-                        top: auto;
-                        bottom: -20px;
                     }
                 }
                 .agreement {
