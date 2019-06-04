@@ -136,6 +136,43 @@
 
             }
         });
+        $.ajax({
+            type: "get",
+            url: "../lib/sy3.php",
+            dataType: "json",
+            success: function(response) {
+                var banner_4 = $('.banner-4');
+                console.log(banner_4);
+                var template = '';
+                response.forEach(function(elm, i) {
+                    var pic = JSON.parse(elm.pic);
+                    template = `
+                             <div class="col-md-3">
+                            <a href="xiangqing.html?id=${elm.id}">
+                            <img class="lazy" data-original="${pic[0].src}" alt="1">
+                            <p>${elm.title}</p>
+                            <p>
+                                28 MM
+                            </p>
+                            <p>
+                                <span>￥</span> ${elm.price}
+                            </p>
+                            <p class="p-last">
+                                立即购买
+                            </p>
+                            </a>
+                        </div>
+                    `;
+                    banner_4.append(template);
+                    $("img.lazy").lazyload({
+                        placeholder: "../img/1-1.jpg",
+                        effect: "fadeIn",
+                        threshold: 2000,
+                    });
+                })
+
+            }
+        });
     </script>
 
 </head>
@@ -594,8 +631,8 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active prolist">
-                    <div class="row banner1">
-                        <div class="col-md-3">
+                    <div class="row banner1 banner0">
+                        <!-- <div class="col-md-3">
                             <img class="lazy" data-original="../img/13.png">
                             <p>C L A S S I C PETITE ASHFIELD</p>
                             <p>
@@ -646,13 +683,13 @@
                             <p class="p-last">
                                 立即购买
                             </p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="item">
-                    <div class="row banner2">
+                    <div class="row banner2 banner0-1">
 
-                        <div class="col-md-3">
+                        <!-- <div class="col-md-3">
                             <img class="lazy" data-original="../img/17.png">
                             <p>C L A S S I C PETITE ASHFIELD</p>
                             <p>
@@ -703,7 +740,7 @@
                             <p class="p-last">
                                 立即购买
                             </p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -746,8 +783,8 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active prolist">
-                    <div class="row banner1">
-                        <div class="col-md-3">
+                    <div class="row banner1 banner-3">
+                        <!-- <div class="col-md-3">
                             <img class="lazy" data-original="../img/25.png">
                             <p>C L A S S I C PETITE ASHFIELD</p>
                             <p>
@@ -798,7 +835,7 @@
                             <p class="p-last">
                                 立即购买
                             </p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="item">
@@ -899,15 +936,15 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active prolist">
-                    <div class="row banner1">
-                        <div class="col-md-3">
+                    <div class="row banner1 banner-4">
+                        <!-- <div class="col-md-3">
                             <img class="lazy" data-original="../img/29.png">
                             <p>C L A S S I C PETITE ASHFIELD</p>
                             <p>
                                 28 MM
                             </p>
                             <p>
-                                <span>￥</span> 1,290
+                                <span>￥</span> 290
                             </p>
                             <p class="p-last">
                                 立即购买
@@ -920,7 +957,7 @@
                                 28 MM
                             </p>
                             <p>
-                                <span>￥</span> 1,290
+                                <span>￥</span> 290
                             </p>
                             <p class="p-last">
                                 立即购买
@@ -933,7 +970,7 @@
                                 40 MM
                             </p>
                             <p>
-                                <span>￥</span> 1,290
+                                <span>￥</span> 390
                             </p>
                             <p class="p-last">
                                 立即购买
@@ -946,12 +983,12 @@
                                 40 MM
                             </p>
                             <p>
-                                <span>￥</span> 1,290
+                                <span>￥</span> 390
                             </p>
                             <p class="p-last">
                                 立即购买
                             </p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="item">
